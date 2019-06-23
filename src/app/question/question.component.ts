@@ -23,6 +23,7 @@ export class QuestionComponent implements OnInit {
       message: 'what the fuck did you just fucking say about me you'
     }
   ];
+  curMessage: string;
 
   constructor(private interviewService: InterviewService) { }
 
@@ -31,7 +32,12 @@ export class QuestionComponent implements OnInit {
   }
 
   nextMessage() {
+    this.messages.push({
+      sentByAI: false,
+      message: this.curMessage
+    } as ChatMessage);
 
+    this.curMessage = null;
+    console.log('updated messages: ' + JSON.stringify(this.messages));
   }
-
 }

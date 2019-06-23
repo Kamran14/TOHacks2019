@@ -5,7 +5,20 @@ import { ChatMessage } from './chat-message';
   providedIn: 'root'
 })
 export class ChatbotService {
-  messages: ChatMessage[] = [];
+  messages: ChatMessage[] = [
+    {
+      sentByAI: true,
+      message: 'hihihi'
+    },
+    {
+      sentByAI: false,
+      message: 'ahhh'
+    },
+    {
+      sentByAI: true,
+      message: 'what the fuck did you just fucking say about me you'
+    }
+  ];
 
   constructor() { }
 

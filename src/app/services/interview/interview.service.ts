@@ -6,7 +6,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class InterviewService {
-  storedMessages: ChatMessage[] = []
   intQuestions: string[] = [];
 
   mockQuestions = ['message one', 'hi bitches', 'third message coming through'];
@@ -21,10 +20,10 @@ export class InterviewService {
 
   }
 
-  nextMessage(message: ChatMessage, messageNum: number) {
+  nextQuestion(questionNum: number) {
     //push current response to storedmessages
     //retrieve and return next question
-    this.storedMessages.push(message);
+    
   }
 
 }

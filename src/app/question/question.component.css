@@ -9,7 +9,7 @@ div.desc-wrapper {
 }
 
 div.content-wrapper, div.input-wrapper {
-    margin: 2.5em;
+    margin: 2em;
     padding: 1em;
     width: 65vw;
     border-radius: 5px;
@@ -19,10 +19,11 @@ div.content-wrapper, div.input-wrapper {
 div.content-wrapper {
     height: 60vh;
     margin-bottom: 0;
+    overflow-y: scroll;
 }
 
 div.input-wrapper {
-    width: 62.7vw;
+    width: 63.8vw;
     margin-top: 0;
     padding: 0;
     padding-left: 1em;
@@ -49,4 +50,9 @@ p {
 
 ::ng-deep .mat-form-field-underline {
     display: none;
+}
+
+mat-form-field {
+    padding-right: 1em;
+    width: fill;
 }
