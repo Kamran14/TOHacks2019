@@ -54,9 +54,15 @@ app.get('/response', (req, res) => {
 
 app.get('/', (req, res) => {
     //res.sendFile(__dirname + '/index.html');
+    try{
     extractor.fileToJSON('resume.pdf').then((result) => {
-        res.send(JSON.parse(result));
-    });
+        res.send(result["experience"]);
+    }).catch(error => new function(){
+        console.log("Error Status: " + error);
+    })
+}catch( e){
+    console.log("Fixme: " + e.toString());
+}
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
