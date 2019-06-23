@@ -55,14 +55,31 @@ app.get('/response', (req, res) => {
                // console.log(read);
 
                 var questions = read;
-                var myLangs = {};
+     
   
-                //console.log(questions["Questions"]["Technical"])                
 
                 for (var i = 0; i < questions["Questions"]["Technical"].length; i++) {
                     userQuestions["Questions"]["Technical"].push(questions["Questions"]["Technical"][i]);
                     
                 }
+
+
+                var q1 = Math.round(Math.random() * 76);
+                var q2 = q1;
+                var q3 = q1;
+                while (q2 == q1) {
+                    q2 = Math.round(Math.random() * 76);
+                }
+                while (q3 == q1 || q3 == q2) {
+                    q3 = Math.round(Math.random() * 76);
+                }
+
+                console.log(q1)
+
+                userQuestions["Questions"]["General"].push(questions["Questions"]["General"][q1]);
+                userQuestions["Questions"]["General"].push(questions["Questions"]["General"][q2]);
+                userQuestions["Questions"]["General"].push(questions["Questions"]["General"][q3]);
+
                 //console.log(myLangs);
                 res.send(userQuestions);
                 //res.send(userQuestions); //Sends education & projects related stuff
