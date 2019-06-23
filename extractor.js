@@ -21,8 +21,5 @@ function fileToJSON(fileName) {
     })
 }
 
-const button = document.getElementById('myButton');
-button.addEventListener('click', function(e) {
-    module.exports.fileToJSON = fileToJSON;
-});
-  
+
+module.exports.fileToJSON = fileToJSON;

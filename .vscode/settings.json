@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/74c6ad9f-8c9c-4a10-be65-3ea01ce017fa/resourceGroups/caliorbust/providers/Microsoft.Web/sites/CaliorBust",
+    "appService.deploySubpath": ""
+}
