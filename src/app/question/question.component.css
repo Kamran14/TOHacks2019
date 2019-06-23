@@ -17,7 +17,7 @@ div.content-wrapper, div.input-wrapper {
 }
 
 div.content-wrapper {
-    height: 60vh;
+    height: 65vh;
     margin-bottom: 0;
     overflow-y: scroll;
 }
@@ -58,8 +58,23 @@ mat-form-field {
 }
 
 button.results {
+    margin-top: 0.5em;
+    padding-left: 1em;
     height: 3em;
     width: 10em;
+    text-align: left;
     font-size: 2em;
-    background: palevioletred;
+    background: rgb(224, 108, 147);
+}
+
+.results-send {
+    margin-left: 1.5em;
+}
+
+.send {
+    color: rgb(255, 101, 160);
+}
+
+.send-disabled {
+    color: gray;
 }

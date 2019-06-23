@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { InterviewService } from '../services/interview/interview.service';
 import { ChatMessage } from '../services/chatbot/chat-message';
 import { Router } from '@angular/router';
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
+  @ViewChild('chatbox', null) private toScroll: ElementRef;
+
   end = false;
 
   descTitle = "Part 1: General";
@@ -56,6 +58,10 @@ export class QuestionComponent implements OnInit {
       technical: false,
       message: this.nextQuestion().question
     })
+  }
+
+  scroll() {
+    document.getElementById(this.curCategory + '' + this.curQuestion).scrollIntoView();
   }
 
   nextMessage() {
