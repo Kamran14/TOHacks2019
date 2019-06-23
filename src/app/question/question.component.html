@@ -9,12 +9,14 @@
     <ng-template #gotoResults>
       <div class="end-wrapper">
         <h2>
-          The interview has ended.
+          The interview has ended. Feel free to review your answers, or start over again!
         </h2>
-        <button class="results" mat-button>
-          Go to results
-          <mat-icon class="results-send">send</mat-icon>
-        </button>
+        <a routerLink="/">
+          <button class="results" mat-button>
+            Restart
+            <mat-icon class="results-send">send</mat-icon>
+          </button>
+        </a>
       </div>
     </ng-template>
   </div>  

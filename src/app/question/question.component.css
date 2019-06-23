@@ -68,7 +68,7 @@ button.results {
 }
 
 .results-send {
-    margin-left: 1.5em;
+    margin-left: 4.3em;
 }
 
 .send {
@@ -77,4 +77,9 @@ button.results {
 
 .send-disabled {
     color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

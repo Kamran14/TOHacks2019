@@ -16,6 +16,7 @@ import { UploadComponent } from './upload/upload.component';
 import { AppRoutingModule } from './app-routing.module';
 import { QuestionComponent } from './question/question.component';
 import { MessageComponent } from './message/message.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MessageComponent } from './message/message.component';
     NavbarComponent,
     UploadComponent,
     QuestionComponent,
-    MessageComponent
+    MessageComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

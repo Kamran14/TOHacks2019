@@ -51,17 +51,19 @@ export class InterviewService {
   getQuestions() {
     return this.mockQuestions;
 
-    // var fileURL = this.url;
+    //  var fileURL = this.url;
 
-    // var xhr = new XMLHttpRequest();
+    //  var xhr = new XMLHttpRequest();
 
-    // xhr.open("GET", "http://caliorbust.azurewebsites.net/response", false);
+    //  xhr.open("GET", "http://10.17.237.23:3000/response", false);
     
-    // xhr.send();
+    //  xhr.send();
 
-    // let questions = JSON.parse(xhr.responseText);
+    //  let questions = JSON.parse(xhr.responseText);
 
-    // return questions;
+    //  console.log("HERE: " + JSON.stringify(questions));
+
+    //  return questions;
 
   }
 
