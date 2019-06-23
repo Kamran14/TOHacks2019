@@ -1,9 +1,19 @@
 <div class="wrapper" fxLayoutAlign="center center" fxLayoutGap="2em">
   <div class="desc-wrapper">
-    <h2>Part 1</h2>
-    <p>In this section, you'll be answering general behavioral questions. The chatbot will grade you 
-      on each question by sentiment.
-    </p>
+    <div *ngIf="end; else gotoResults">
+      <h2>{{ descTitle }}</h2>
+      <p>
+        {{ descDesc }}
+      </p>
+    </div>
+    <ng-template #gotoResults>
+      <h2>
+        The interview has ended
+      </h2>
+      <button class="results" mat-button>
+        Go to results
+      </button>
+    </ng-template>
   </div>  
   <div fxLayout="column" fxLayoutGap="1em">
     <div class="content-wrapper mat-elevation-z4" fxLayout="column">
@@ -14,7 +24,7 @@
               <app-message [sentByAI]="message.sentByAI" [messageText]="message.message"></app-message>
             </div>
             <ng-template #sentByAI>
-              <app-message [sentByAI]="message.sentByAI" [messageText]="message.message"></app-message>
+              <app-message [sentByAI]="message.sentByAI" [technical]="message.technical" [messageText]="message.message"></app-message>
             </ng-template>
           </div>
         </div>
@@ -22,7 +32,7 @@
     </div>
     <div class="input-wrapper mat-elevation-z4">
       <mat-form-field class="no-line">
-        <input class="invisible" matInput id="user-message" [(ngModel)]="curMessage">
+        <input class="invisible" [disabled]="end" matInput id="user-message" [(ngModel)]="curMessage" (keyup.enter)="nextMessage()">
         <button mat-icon-button matSuffix (click)="nextMessage()">
             <mat-icon>send</mat-icon>
         </button>

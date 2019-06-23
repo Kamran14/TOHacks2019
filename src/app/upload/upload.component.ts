@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import * as AzureStorage from '../scripts/azure-storage.blob.min.js';
 
 declare var AzureStorage: any;
@@ -6,8 +7,8 @@ declare var AzureStorage: any;
 // Blob-related code goes here
 const account = {
   name: "resumestg",
-  sas:  "?sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-06-23T08:57:02Z&st=2019-06-23T00:57:02Z&spr=https&sig=d91zCsh6HebORQx%2FDecIEwe%2BetVgqsUfeCmcNJDtrbA%3D"
-};
+  sas:  "?sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-06-23T21:02:13Z&st=2019-06-23T13:02:13Z&spr=https&sig=HBhQNql2RU4cgjMokowqGr0pnnXmL3I%2BG5iDdFhAYLQ%3D"
+}
 
 const blobUri = 'https://' + account.name + '.blob.core.windows.net';
 const blobService = AzureStorage.Blob.createBlobServiceWithSas(blobUri, account.sas);
@@ -21,7 +22,7 @@ export class UploadComponent implements OnInit {
 
   selected: string = 'Select a file';
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
@@ -55,6 +56,7 @@ export class UploadComponent implements OnInit {
 
             const url = blobService.getUrl("mycontainer", result.name);
             console.log(url)
+            this.router.navigate(['/interview']);
         }
     });
   }

@@ -56,3 +56,10 @@ mat-form-field {
     padding-right: 1em;
     width: fill;
 }
+
+button.results {
+    height: 3em;
+    width: 10em;
+    font-size: 2em;
+    background: palevioletred;
+}

@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MessageComponent implements OnInit {
   @Input() messageText: string;
   @Input() sentByAI: boolean;
+  @Input() technical: boolean;
   bgColor: string;
 
   constructor() { }

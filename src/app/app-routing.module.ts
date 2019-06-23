@@ -4,7 +4,8 @@ import { UploadComponent } from './upload/upload.component';
 import { QuestionComponent } from './question/question.component';
 
 const routes: Routes = [
-  { path: '', component: QuestionComponent }
+  { path: '', component: UploadComponent },
+  { path: 'interview', component: QuestionComponent}
 ];
 
 @NgModule({

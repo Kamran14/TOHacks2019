@@ -1,3 +1,8 @@
 <div class="wrapper" [ngStyle]="{'background': bgColor}" *ngIf="messageText.length !== 0">
-  {{ messageText }}
+  <div *ngIf="technical; else general">
+    <img [src]="messageText">
+  </div>
+  <ng-template #general>
+    {{ messageText }}
+  </ng-template>
 </div>
