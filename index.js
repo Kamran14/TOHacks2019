@@ -44,7 +44,7 @@ app.get('/response', (req, res) => {
     
     //const phrases = JSON.parse(xhr.responseText)["documents"]["0"].keyPhrases;
 
-    const phrases = ["Python", "Java", "C"];
+    const phrases = ["Python", "C"]
 
     var userQuestions = JSON.parse('{"Questions":{"Technical":[], "General":[]}}');
 
@@ -60,9 +60,7 @@ app.get('/response', (req, res) => {
                 //console.log(questions["Questions"]["Technical"])                
 
                 for (var i = 0; i < questions["Questions"]["Technical"].length; i++) {
-                    
                     userQuestions["Questions"]["Technical"].push(questions["Questions"]["Technical"][i]);
-                    
                     
                 }
                 //console.log(myLangs);

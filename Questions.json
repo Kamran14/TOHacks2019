@@ -15,12 +15,6 @@
             },
             {
                 "id": 2,
-                "languages":"Java",
-                "question": "https://i.imgur.com/63MkXBr.png",
-                "ans":"Reverse String/Character array"
-            },
-            {
-                "id": 3,
                 "languages":"C",
                 "question": "https://i.imgur.com/fmpt4np.png",
                 "ans": "Reverse an int"
