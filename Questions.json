@@ -3,32 +3,31 @@
         "Technical":[
             {
                 "id":0,
-                "title":"",
-                "languages":"Python, python",
+                "languages":"Python",
                 "question": "https://i.imgur.com/Q6Cq78a.png",
                 "ans":"Transpose Function"
             },
             {
                 "id": 1,
-                "languages":"Java, java",
+                "languages":"Java",
                 "question": "https://i.imgur.com/XhI4aaw.png",
                 "ans":"Get Max Number"
             },
             {
                 "id": 2,
-                "languages":"Java, java",
+                "languages":"Java",
                 "question": "https://i.imgur.com/63MkXBr.png",
                 "ans":"Reverse String/Character array"
             },
             {
                 "id": 3,
-                "languages":"C, c",
+                "languages":"C",
                 "question": "https://i.imgur.com/fmpt4np.png",
                 "ans": "Reverse an int"
             },
             {
                 "id": 4,
-                "languages":"C, c",
+                "languages":"C",
                 "question": "https://i.imgur.com/fmpt4np.png",
                 "ans": "Reverse an int"
             }

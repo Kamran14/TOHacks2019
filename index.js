@@ -44,9 +44,9 @@ app.get('/response', (req, res) => {
     
     //const phrases = JSON.parse(xhr.responseText)["documents"]["0"].keyPhrases;
 
-    const phrases = ["Python", "Java"];
+    const phrases = ["Python", "Java", "C"];
 
-    var userQuestions = '{"Questions":{"Technical":[], "General":[]}}'
+    var userQuestions = JSON.parse('{"Questions":{"Technical":[], "General":[]}}');
 
 
     jsonfile.readFile('./Questions.json')
@@ -55,18 +55,19 @@ app.get('/response', (req, res) => {
                // console.log(read);
 
                 var questions = read;
-
+                var myLangs = {};
+  
                 //console.log(questions["Questions"]["Technical"])                
 
-                for (var i = 0; i<questions["Questions"]["Technical"].length(); i++) {
+                for (var i = 0; i < questions["Questions"]["Technical"].length; i++) {
                     
+                    userQuestions["Questions"]["Technical"].push(questions["Questions"]["Technical"][i]);
                     
-                        userQuestions["Questions"]["Technical"].push(questions["Questions"]["Technical"][index])
                     
                 }
-
-                
-                res.send(userQuestions); //Sends education & projects related stuff
+                //console.log(myLangs);
+                res.send(userQuestions);
+                //res.send(userQuestions); //Sends education & projects related stuff
             })
             .catch(error => console.error(error))
 
