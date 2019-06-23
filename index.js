@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const extractor = require('./extractor');
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const jsonfile = require('jsonfile')
 
 app.use(express.static('public'));  
 
@@ -21,13 +22,13 @@ app.get('/question', (req, res) => {
 app.get('/response', (req, res) => {
     //const responsedd = req.query.reponse;
     var data = " {\n        \"documents\": [\n            {\n                \"language\": \"en\",\n                \"id\": \"0\",\n                \"text\": \""+req.query.response+"\"\n            }\n        ]\n    }";
-    console.log(data)
+    //console.log(data)
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
     xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
-        console.log(this.responseText);
+        //console.log(this.responseText);
       
     }
     });
@@ -39,11 +40,38 @@ app.get('/response', (req, res) => {
 
     xhr.send(data);
 
-    console.log("hi")
+    //console.log("hi")
     
-    const score = JSON.parse(xhr.responseText);
-    res.send(score);
-    //res.send((Math.round(score*100, 0)).toString());
+    //const phrases = JSON.parse(xhr.responseText)["documents"]["0"].keyPhrases;
+
+    const phrases = ["Python", "Java"];
+
+    var userQuestions = '{"Questions":{"Technical":[], "General":[]}}'
+
+
+    jsonfile.readFile('./Questions.json')
+            .then(read => {
+                
+               // console.log(read);
+
+                var questions = read;
+
+                //console.log(questions["Questions"]["Technical"])                
+
+                for (var i = 0; i<questions["Questions"]["Technical"].length(); i++) {
+                    
+                    
+                        userQuestions["Questions"]["Technical"].push(questions["Questions"]["Technical"][index])
+                    
+                }
+
+                
+                res.send(userQuestions); //Sends education & projects related stuff
+            })
+            .catch(error => console.error(error))
+
+
+   // res.send(score);
 });
 
 
