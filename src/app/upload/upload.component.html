@@ -1,0 +1,11 @@
+<div class="main" fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="center center">
+  <h1>Welcome to Cali or Bust</h1>
+  <h3>Upload your resume to get started</h3>
+
+  <div></div>
+  <div class="file-wrapper" fxLayoutAlign="center center">
+    <button id="file-disguise" mat-button>{{ selected }}</button>
+    <input id="file-input" type="file" (change)="setFileName()">
+  </div>
+  <button mat-button id="upload" (click)="upload()">Upload</button>
+</div>

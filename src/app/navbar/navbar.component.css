@@ -1,0 +1,32 @@
+mat-toolbar {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+div, mat-toolbar {
+    z-index: 3;
+    position: relative;
+}
+
+mat-toolbar {
+    overflow: hidden;
+}
+
+.buttonsDiv {
+    margin-right: 1em;
+    width: 100%;
+}
+
+.desc {
+    font-weight: lighter;
+    font-size: 0.7em;
+}
+
+.desc-big {
+    font-weight: lighter;
+    font-size: 0.9em;
+}
+
+.logo {
+    height: 4em;
+    width: auto;
+}

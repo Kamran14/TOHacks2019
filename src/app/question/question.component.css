@@ -1,0 +1,28 @@
+div.wrapper {
+    padding: 1.5em;
+}
+
+div.desc-wrapper {
+    padding: 1em;
+    padding-left: 2em;
+    width: 25vw;
+}
+
+div.content-wrapper {
+    margin: 3em;
+    padding: 1em;
+    width: 65vw;
+    height: 60vh;
+    background: white;
+    color: black;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
