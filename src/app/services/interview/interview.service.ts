@@ -8,17 +8,90 @@ import { BehaviorSubject } from 'rxjs';
 export class InterviewService {
   storedMessages: ChatMessage[] = []
   intQuestions: string[] = [];
+  url: string;
 
-  mockQuestions = ['message one', 'hi bitches', 'third message coming through'];
+  mockQuestions = {
+    "Questions":{
+       "Technical":[
+          {
+             "id":2,
+             "languages":"Java, java",
+             "question":"https://i.imgur.com/63MkXBr.png",
+             "ans":"Reverse String/Character array"
+          },
+          {
+             "id":3,
+             "languages":"C, c",
+             "question":"https://i.imgur.com/fmpt4np.png",
+             "ans":"Reverse an int"
+          }
+       ],
+       "General":[
+          {
+             "index":38,
+             "question":"Was there a person in your career who really made a difference?"
+          },
+          {
+             "index":42,
+             "question":"What are you looking for in terms of career development?"
+          },
+          {
+             "index":66,
+             "question":"Tell me one thing about yourself you wouldn't want me to know."
+          }
+       ]
+    }
+ };
 
   constructor() { }
 
   getQuestions() {
-    return this.mockQuestions;
+    //return this.mockQuestions;
+
+    var fileURL = this.url;
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "http://caliorbust.azurewebsites.net/response", false);
+    
+    xhr.send();
+
+    let questions = JSON.parse(xhr.responseText);
+
+    return questions;
+
   }
 
-  getFeedback(response: string) {
+ 
 
+  checkAnswer(response: string, question: JSON) {
+   const levenshtein = require('js-levenshtein'); 
+   
+   //technical Q
+    if ("id" in question) {
+      let distance = levenshtein(question["ans"], response)
+      if (distance < 3 ) {
+         return "Correct! Good Job!";
+      } else if (distance < 10) {
+         return "Close! Correct answer was: " + question["ans"];
+      } else {
+         return "Didn't match our answers! Correct answer was: " + question["ans"];
+      }
+
+    //general Q
+    } else {
+      let sentRes = this.sentiment(response);
+
+      if (sentRes < 25) {
+         return "Good try! But there's lots of room for improvement."
+      } else if (sentRes < 50) {
+         return "Almost! Better luck next time!";
+      } else if (sentRes < 75) {
+         return "Pretty good answer!"
+      } else {
+         return "Awesome job! You killed it!"
+      }
+    }
   }
 
   nextMessage(message: ChatMessage, messageNum: number) {
