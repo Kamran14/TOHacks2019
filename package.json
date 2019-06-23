@@ -1,0 +1,17 @@
+{
+  "name": "caliorbust",
+  "version": "1.0.0",
+  "description": "c a l i o r b u s t",
+  "main": "index.js",
+  "scripts": {
+    "test": "justtestme"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonfile": "^5.0.0",
+    "resume-parser": "^1.1.0",
+    "textract": "^2.5.0"
+  }
+}
