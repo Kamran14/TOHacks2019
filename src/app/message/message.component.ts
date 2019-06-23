@@ -15,9 +15,9 @@ export class MessageComponent implements OnInit {
 
   ngOnInit() {
     if (this.sentByAI) {
-      this.bgColor = 'skyblue';
+      this.bgColor = 'rgb(72, 192, 214)';
     } else {
-      this.bgColor = 'pink';
+      this.bgColor = 'rgb(237, 87, 142)';
     }
   }
 }
