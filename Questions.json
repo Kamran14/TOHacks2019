@@ -1,0 +1,347 @@
+{
+    "Questions" : {
+        "Technical":[
+            {
+                "id":0,
+                "title":"",
+                "languages":"Python, python",
+                "question": "https://i.imgur.com/Q6Cq78a.png",
+                "ans":"Transpose Function"
+            },
+            {
+                "id": 1,
+                "languages":"Java, java",
+                "question": "https://i.imgur.com/XhI4aaw.png",
+                "ans":"Get Max Number"
+            },
+            {
+                "id": 2,
+                "languages":"Java, java",
+                "question": "https://i.imgur.com/63MkXBr.png",
+                "ans":"Reverse String/Character array"
+            },
+            {
+                "id": 3,
+                "languages":"C, c",
+                "question": "https://i.imgur.com/fmpt4np.png",
+                "ans": "Reverse an int"
+            },
+            {
+                "id": 4,
+                "languages":"C, c",
+                "question": "https://i.imgur.com/fmpt4np.png",
+                "ans": "Reverse an int"
+            }
+        ],
+        "General":[
+            {
+                "index":0,
+                "question":"What are your strengths?"
+             },
+             {
+                "index":1,
+                "question":"Why are you interested in working for our company?"
+             },
+             {
+                "index":2,
+                "question":"Where do you see yourself in five years? Ten years?"
+             },
+             {
+                "index":3,
+                "question":"Why do you want to leave your current company?"
+             },
+             {
+                "index":4,
+                "question":"What can you offer us that someone else can not?"
+             },
+             {
+                "index":5,
+                "question":"Tell me about an accomplishment you are most proud of."
+             },
+             {
+                "index":6,
+                "question":"What is your dream job?"
+             },
+             {
+                "index":7,
+                "question":"How did you hear about this position?"
+             },
+             {
+                "index":8,
+                "question":"What would you look to accomplish in the first 60 days on the job?"
+             },
+             {
+                "index":9,
+                "question":"Discuss your resume."
+             },
+             {
+                "index":10,
+                "question":"Discuss your educational background."
+             },
+             {
+                "index":11,
+                "question":"Describe yourself."
+             },
+             {
+                "index":12,
+                "question":"Why should we hire you?"
+             },
+             {
+                "index":13,
+                "question":"Why are you looking for a new job?"
+             },
+             {
+                "index":14,
+                "question":"Give a time when you went above and beyond the requirements for a project."
+             },
+             {
+                "index":15,
+                "question":"Who are our competitors?"
+             },
+             {
+                "index":16,
+                "question":"What motivates you?"
+             },
+             {
+                "index":17,
+                "question":"What’s your availability?"
+             },
+             {
+                "index":18,
+                "question":"Who’s your mentor?"
+             },
+             {
+                "index":19,
+                "question":"How do you handle pressure?"
+             },
+             {
+                "index":20,
+                "question":"What are your career goals?"
+             },
+             {
+                "index":21,
+                "question":"What gets you up in the morning?"
+             },
+             {
+                "index":22,
+                "question":"What would your direct reports say about you?"
+             },
+             {
+                "index":23,
+                "question":"Are you a leader or a follower?"
+             },
+             {
+                "index":24,
+                "question":"What was the last book you’ve read for fun?"
+             },
+             {
+                "index":25,
+                "question":"What are your hobbies?"
+             },
+             {
+                "index":26,
+                "question":"What are some of your leadership experiences?"
+             },
+             {
+                "index":27,
+                "question":"What do you like the most and least about working in this industry?"
+             },
+             {
+                "index":28,
+                "question":"Would you work 40+ hours a week?"
+             },
+             {
+                "index":29,
+                "question":"What questions haven’t I asked you?"
+             },
+             {
+                "index":30,
+                "question":"What questions do you have for me?"
+             },
+             {
+                "index":31,
+                "question":"Tell me about yourself."
+             },
+             {
+                "index":32,
+                "question":"What are your strengths?"
+             },
+             {
+                "index":33,
+                "question":"Why do you want this job?"
+             },
+             {
+                "index":34,
+                "question":"Where would you like to be in your career five years from now?"
+             },
+             {
+                "index":35,
+                "question":"Tell me about your proudest achievement."
+             },
+             {
+                "index":36,
+                "question":"If you were at a business lunch and you ordered a rare steak and they brought it to you well done, what would you do?"
+             },
+             {
+                "index":37,
+                "question":"How would you go about establishing your credibility quickly with the team?"
+             },
+             {
+                "index":38,
+                "question":"Was there a person in your career who really made a difference?"
+             },
+             {
+                "index":39,
+                "question":"What's your ideal company?"
+             },
+             {
+                "index":40,
+                "question":"What attracted you to this company?"
+             },
+             {
+                "index":41,
+                "question":"What are you most proud of?"
+             },
+             {
+                "index":42,
+                "question":"What are you looking for in terms of career development?"
+             },
+             {
+                "index":43,
+                "question":"Give examples of ideas you've had or implemented."
+             },
+             {
+                "index":44,
+                "question":"What's the last book you read?"
+             },
+             {
+                "index":45,
+                "question":"What would be your ideal working situation?"
+             },
+             {
+                "index":46,
+                "question":"Why should we hire you?"
+             },
+             {
+                "index":47,
+                "question":"What do you think of your previous boss?"
+             },
+             {
+                "index":48,
+                "question":"When were you most satisfied in your job?"
+             },
+             {
+                "index":49,
+                "question":"What can you do for us that other candidates can't?"
+             },
+             {
+                "index":50,
+                "question":"What are three positive things your last boss would say about you?"
+             },
+             {
+                "index":51,
+                "question":"What were the responsibilities of your last position?"
+             },
+             {
+                "index":52,
+                "question":"What do you know about this industry?"
+             },
+             {
+                "index":53,
+                "question":"What do you know about our company?"
+             },
+             {
+                "index":54,
+                "question":"What was the last project you headed up, and what was its outcome?"
+             },
+             {
+                "index":55,
+                "question":"What kind of goals would you have in mind if you got this job?"
+             },
+             {
+                "index":56,
+                "question":"Give me an example of a time that you felt you went above and beyond the call of duty at work."
+             },
+             {
+                "index":57,
+                "question":"Who has impacted you most in your career, and how?"
+             },
+             {
+                "index":58,
+                "question":"What do you see yourself doing within the first 30 days of this job?"
+             },
+             {
+                "index":59,
+                "question":"What's the most important thing you've learned in school?"
+             },
+             {
+                "index":60,
+                "question":"What three character traits would your friends use to describe you?"
+             },
+             {
+                "index":61,
+                "question":"What is your greatest achievement outside of work?"
+             },
+             {
+                "index":62,
+                "question":"Do you think a leader should be feared or liked?"
+             },
+             {
+                "index":63,
+                "question":"What do you like to do for fun?"
+             },
+             {
+                "index":64,
+                "question":"Why are you leaving your present job?"
+             },
+             {
+                "index":65,
+                "question":"What do you do in your spare time?"
+             },
+             {
+                "index":66,
+                "question":"Tell me one thing about yourself you wouldn't want me to know."
+             },
+             {
+                "index":67,
+                "question":"Tell me the difference between good and exceptional."
+             },
+             {
+                "index":68,
+                "question":"Why did your choose your major?"
+             },
+             {
+                "index":69,
+                "question":"What are the qualities of a good leader?"
+             },
+             {
+                "index":70,
+                "question":"How many times do a clock's hands overlap in a day?"
+             },
+             {
+                "index":71,
+                "question":"How would you weigh a plane without scales?"
+             },
+             {
+                "index":72,
+                "question":"Describe how you would handle a situation if you were required to finish multiple tasks by the end of the day, and there was no conceivable way that you could finish them."
+             },
+             {
+                "index":73,
+                "question":"What techniques and tools do you use to keep yourself organized?"
+             },
+             {
+                "index":74,
+                "question":"With your eyes closed, tell me step-by-step how to tie my shoes."
+             },
+             {
+                "index":75,
+                "question":"If you had to choose one, would you consider yourself a big-picture person or a detail-oriented person?"
+             },
+             {
+                "index":76,
+                "question":"If selected for this position, can you describe your strategy for the first 90 days?"
+             }             
+        ]
+    }
+}
