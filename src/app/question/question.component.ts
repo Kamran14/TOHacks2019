@@ -19,4 +19,9 @@ export class QuestionComponent implements OnInit {
 
   }
 
+  getSentiment() {
+    let sentimentNumber = this.interviewService.sentiment("We love this trail and make the trip every year. The views are breathtaking and well worth the hike!");
+    console.log(sentimentNumber);
+  }
+
 }
