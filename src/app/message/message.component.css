@@ -1,0 +1,9 @@
+div.wrapper {
+    border-radius: 5px;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+div.chat {
+    height: 15em;
+}

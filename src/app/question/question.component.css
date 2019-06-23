@@ -8,13 +8,24 @@ div.desc-wrapper {
     width: 25vw;
 }
 
-div.content-wrapper {
-    margin: 3em;
+div.content-wrapper, div.input-wrapper {
+    margin: 2.5em;
     padding: 1em;
     width: 65vw;
+    border-radius: 5px;
+    border: 0.5px solid gray;
+}
+
+div.content-wrapper {
     height: 60vh;
-    background: white;
-    color: black;
+    margin-bottom: 0;
+}
+
+div.input-wrapper {
+    width: 62.7vw;
+    margin-top: 0;
+    padding: 0;
+    padding-left: 1em;
 }
 
 h2 {
@@ -25,4 +36,17 @@ h2 {
 p {
     font-size: 1.1em;
     line-height: 1.4em;
+}
+
+.invisible {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    z-index: 2;
+    font-weight: lighter;
+    margin-bottom: -0.2em;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
 }
