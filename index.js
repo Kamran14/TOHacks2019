@@ -27,25 +27,23 @@ app.get('/response', (req, res) => {
 
     xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
-        //console.log(this.responseText);
+        console.log(this.responseText);
       
     }
     });
 
-    xhr.open("POST", "https://eastus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment", false);
+    xhr.open("POST", "https://eastus.api.cognitive.microsoft.com/text/analytics/v2.0/keyPhrases", false);
     xhr.setRequestHeader("ocp-apim-subscription-key", "8bd00edfaa1e4b628dc659978083bbd9");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Accept", "application/json");
 
-    
-
     xhr.send(data);
 
     console.log("hi")
-
-    const score = JSON.parse(xhr.responseText)["documents"][0]["score"]
-
-    res.send((Math.round(score*100, 0)).toString());
+    
+    const score = JSON.parse(xhr.responseText);
+    res.send(score);
+    //res.send((Math.round(score*100, 0)).toString());
 });
 
 
@@ -56,7 +54,8 @@ app.get('/', (req, res) => {
     //res.sendFile(__dirname + '/index.html');
     try{
     extractor.fileToJSON('resume.pdf').then((result) => {
-        res.send(result["experience"]);
+        //res.send(result["experience"]);
+        res.redirect('/response?response='+result["experience"])
     }).catch(error => new function(){
         console.log("Error Status: " + error);
     })
