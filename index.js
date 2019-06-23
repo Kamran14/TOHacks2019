@@ -53,9 +53,10 @@ app.get('/response', (req, res) => {
 
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-    let thing = extractor.fileToJSON('resume.pdf');
-    res.send(JSON.stringify(thing));
+    //res.sendFile(__dirname + '/index.html');
+    extractor.fileToJSON('resume.pdf').then((result) => {
+        res.send(JSON.stringify(result));
+    });
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

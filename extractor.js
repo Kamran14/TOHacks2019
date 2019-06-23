@@ -19,6 +19,8 @@ function fileToJSON(fileName) {
             console.error(error);
         });
     })
+
+    return promise;
 }
 
 
