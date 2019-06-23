@@ -4,7 +4,7 @@ const port = 3000;
 const extractor = require('./extractor');
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-app.get('/', (req, res) => {
+app.get('/response', (req, res) => {
     //const responsedd = req.query.reponse;
     var data = " {\n        \"documents\": [\n            {\n                \"language\": \"en\",\n                \"id\": \"0\",\n                \"text\": \""+req.query.response+"\"\n            }\n        ]\n    }";
 console.log(data)
@@ -14,7 +14,7 @@ console.log(data)
     xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
         //console.log(this.responseText);
-        //console.log(this.responseText);
+      
     }
     });
 

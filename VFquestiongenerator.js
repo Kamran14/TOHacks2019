@@ -12,7 +12,7 @@ const questions = [
 
 
 
-app.get('/', (req, res) => {
+app.get('/question', (req, res) => {
     var question = questions[Math.floor(Math.random()*questions.length)];
     res.send(question);
 });
