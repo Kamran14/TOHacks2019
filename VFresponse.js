@@ -12,10 +12,10 @@ console.log(data)
     xhr.withCredentials = true;
 
     xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-        //console.log(this.responseText);
-      
-    }
+        if (this.readyState === this.DONE) {
+            //console.log(this.responseText);
+            
+        }
     });
 
     xhr.open("POST", "https://eastus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment", false);

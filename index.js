@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const extractor = require('./extractor');
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 app.use(express.static('public'));  
 
@@ -20,7 +21,7 @@ app.get('/question', (req, res) => {
 app.get('/response', (req, res) => {
     //const responsedd = req.query.reponse;
     var data = " {\n        \"documents\": [\n            {\n                \"language\": \"en\",\n                \"id\": \"0\",\n                \"text\": \""+req.query.response+"\"\n            }\n        ]\n    }";
-console.log(data)
+    console.log(data)
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
