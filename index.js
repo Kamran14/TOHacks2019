@@ -55,7 +55,7 @@ app.get('/response', (req, res) => {
 app.get('/', (req, res) => {
     //res.sendFile(__dirname + '/index.html');
     extractor.fileToJSON('resume.pdf').then((result) => {
-        res.send(JSON.stringify(result));
+        res.send(JSON.parse(result));
     });
 });
 
