@@ -60,8 +60,7 @@
           <br /><br />
           <button class="btn btn-lg btn-danger" id="upload-button">Upload</button>
           <br /><br />
-         <button class="btn btn-lg btn-danger" id="list-button">List</button>
-         <br />      
+   
          <a href="questions.html" class="btn btn-lg btn-danger" id="cont-button" style="display:none;"><b class="">Continue...</b></a>
           
          
@@ -142,21 +141,6 @@
     
     
 
-        //list blob
-        document.getElementById('list-button').addEventListener('click', () => {
-
-        blobService.listBlobsSegmented('mycontainer', null, (error, results) => {
-            if (error) {
-                // Handle list blobs error
-                console.log(error);
-            } else {
-                results.entries.forEach(blob => {
-                    console.log(blob);
-                });
-            }
-        });
-
-        });
     
     
     </script>
